@@ -1,0 +1,110 @@
+#monBouton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 25%;
+    transform: translate(-50%, -50%);
+    width: 62vh;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+    cursor: pointer;
+
+    &:hover {
+        background: transparent;
+        outline: red;
+    }
+
+    &:focus {
+        outline: red;
+        background: transparent;
+    }
+}
+
+.grid {
+    animation: slideAround 10s infinite alternate linear;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    will-change: grid-template-columns, grid-template-rows;
+    position: absolute;
+    top: 0;
+    
+    .rect {
+        animation: colorShift 10s 250ms infinite both linear;
+        background: blue;
+        height: 200px;
+        place-self: flex-end;
+        width: 200px;
+    
+    .image{
+        width: 100%;
+        aspect-ratio: 1;
+        background-image: url("../resources/Aurele.png");
+        background-size: cover;
+        opacity: 0.5;
+    }
+    
+    }
+}
+
+
+@keyframes slideAround {
+    0% {
+        grid-template-columns: 70% 1fr;
+        grid-template-rows: 200px 1fr;
+    }
+
+    25% {
+        grid-template-columns: 20% 1fr;
+        grid-template-rows: 100% 1fr;
+    }
+
+    50% {
+        grid-template-columns: 50% 1fr;
+        grid-template-rows: 200px 1fr;
+    }
+
+    75% {
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 70% 1fr;
+    }
+
+    100% {
+        grid-template-columns: 100% 1fr;
+        grid-template-rows: 100% 1fr;
+    }
+}
+
+@keyframes colorShift {
+
+    0%,
+    24% {
+        background-color: red;
+    }
+
+    25%,
+    49% {
+        background-color: green;
+    }
+
+    50%,
+    74% {
+        background-color: blue;
+    }
+
+    75%,
+    99% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: red;
+    }
+}

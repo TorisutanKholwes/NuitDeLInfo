@@ -1,0 +1,26 @@
+#Zoom {
+    position: absolute;
+    z-index: 1000;
+    cursor: pointer;
+    background-image: url('../resources/firstVignette.png');
+    height: 5vh;
+    width: 5vh;
+    border-radius: 5%;
+    gap: 10vw;
+    top: 150%;
+    left: 50%;
+    animation: zoom 3s infinite linear;
+}
+
+
+@keyframes zoom {
+    0% {
+        scale: 50% ;
+    }
+    50% {
+        scale: 70% ;
+    }
+    100%{
+        scale: 90% ;
+    }
+}

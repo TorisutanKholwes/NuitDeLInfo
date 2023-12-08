@@ -1,0 +1,43 @@
+$first: url("../resources/firstVignette.png");
+$second: url("../resources/secondVignette.png");
+$third: url("../resources/thirdVignette.png");
+
+#vignettes_box {
+    width: 100vw;
+    height: 100vh;
+    background-color: greenyellow;
+    position: relative;
+}
+
+#vignettes {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 23vh;
+}
+
+.vignette {
+    position: relative;
+        $baseWidth: 600px;
+        $baseHeight: 800px;
+    width: calc(#{$baseWidth} / 2);
+    height: calc(#{$baseHeight} / 2);
+    border-radius: 10px;
+}
+
+.vignette:hover {
+    box-shadow: 1em black;
+}
+
+@for $i from 1 through 3 {
+    .vignette[value="#{$i}"] {
+        @if ($i == 1) {
+            background: $first no-repeat;
+        } @else if ($i == 2) {
+            background: $second no-repeat;
+        } @else if ($i == 3) {
+            background: $third no-repeat;
+        }
+        background-size: cover;
+
+    }
+}

@@ -1,0 +1,30 @@
+@use "sass:map";
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Roboto:wght@500&family=Rubik+Bubbles&family=Satisfy&family=Shadows+Into+Light&family=Whisper&display=swap');
+
+$family: (
+    1: 'Roboto',
+    2: "Whisper",
+    3: "Shadows Into Light",
+    4: "Satisfy",
+    5: "Beau Rivage"
+);
+
+$family_size: length($family);
+
+h1 {
+    position: absolute;
+    z-index: 5;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+    text-align: center;
+}
+
+@for $i from 0 through 50 {
+    #letter-#{$i} {
+        font-family: map.get($family, random($family_size));
+    }
+}

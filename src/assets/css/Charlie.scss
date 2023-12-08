@@ -1,0 +1,25 @@
+#Charlie {
+    position: absolute;
+    top: 183%;
+    left: 50.8%;
+    transform: translate(-50%, -50%);
+    width: 35vh;
+    aspect-ratio: 1;
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10000;
+    cursor: pointer;
+
+    &:hover {
+        background: transparent;
+        outline: red;
+    }
+
+    &:focus {
+        outline: red;
+        background: transparent;
+    }
+}

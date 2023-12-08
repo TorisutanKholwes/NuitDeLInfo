@@ -1,0 +1,14 @@
+#Charlimage {
+    position: absolute;
+    top: 170%;
+    left: 43%;
+    width:30vh;
+    height: 15vh;
+    background-size: cover;
+    aspect-ratio: 1;
+    border: none;
+    font-size: 16px;
+    background-image: url('../resources/charlie.png');
+    background-repeat: no-repeat;
+    z-index: 10000;
+}

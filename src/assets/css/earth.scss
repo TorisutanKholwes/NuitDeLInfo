@@ -1,0 +1,18 @@
+#earth {
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+
+    & h1 {
+        text-align: center;
+    }
+
+    canvas {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+    }
+}
